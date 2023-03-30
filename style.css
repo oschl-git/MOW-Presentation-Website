@@ -12,13 +12,9 @@ body {
 	overflow-y: scroll;
 }
 
-html {
-	height: -webkit-fill-available;
-}
-
-body {
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
+html, body {
+	width: 100dvw;
+	height: 100dvh;
 }
 
 h1, h2, p, html, body {
