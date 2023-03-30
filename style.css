@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+  
+html {
+	font-family: 'Chakra Petch', sans-serif;
+	min-width: 320px;
+	scroll-behavior: smooth;
+
+	scroll-snap-type: y proximity;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+h1, h2, p, html, body {
+	margin: 0;
+	padding: 0;
+}
+
+
+#header, #about {
+	scroll-snap-align: start;
+}
+
+p {
+	font-size: 1.5rem;
+	text-align:justify;
+}
+
+h1 {
+	font-size: 6rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+.tiny {
+	font-size: 1rem;
+}
+
+#scroll-down-container {
+	width: 100%;
+	background-color: black;
+	color: white;
+
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+#scroll-down-container h2 {
+	font-size: 1.5rem;
+	white-space: nowrap;
+	animation: scroll-text 2000ms linear infinite;
+	width: 200vw;
+	padding: 0 6rem;
+}
+
+#info-container a, #info-container a:hover, #info-container a:visited {
+	text-decoration: none;
+}
+
+@keyframes scroll-text {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.light {
+	font-weight: 300;
+}
+
+#header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+#info-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-direction: column;
+	text-align: right;
+}
+
+#about {
+	height: 100vh;
+	padding: .5rem;
+}
+
+#showcase {
+	overflow-y: scroll;
+	display: flex;
+	gap: 1rem;
+	
+	scroll-snap-type: x proximity;
+}
+
+#showcase img {
+	width: 25rem;
+	max-width: 100%;
+	scroll-snap-align: center;
+}
